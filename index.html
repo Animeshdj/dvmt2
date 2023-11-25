@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>DVM task 2</title>
+</head>
+
+<body>
+    <div class="title">
+        Club Merchandise Signings
+    </div>
+    <form class="form">
+        <div class="container">
+            <label for="name">Full Name :</label>
+            <input type="text" id="name" placeholder="Full Name" class="input-box">
+            <div class="error-div"></div>
+        </div>
+        <div class="container">
+            <label for="email">E-mail :</label>
+            <input type="text" id="email" placeholder="E-mail" class="input-box">
+            <div class="error-div"></div>
+        </div>
+        <div class="container">
+            <label for="phone-number">Phone No. :</label>
+            <input type="tel" id="phone-number" placeholder="Phone Number" class="input-box">
+            <div class="error-div"></div>
+        </div>
+        <div class="container">
+            <label for="bits-id">BITS ID :</label>
+            <input type="text" id="bits-id" placeholder="Bits Id" class="input-box">
+            <div class="error-div"></div>
+        </div>
+        <div class="container">
+            <label for="hostel" id="hostel-text">Hostel :</label>
+            <select id="hostel" required class="input-box">
+                <option value="">Select Hostel</option>
+                <option value="sr">SR</option>
+                <option value="vk">VK</option>
+                <option value="ashok">Ashok</option>
+                <option value="vyas">Vyas</option>
+                <option value="malveya">Malveya</option>
+                <option value="meera">Meera</option>
+                <option value="buddh">Buddh</option>
+                <option value="ram">Ram</option>
+                <option value="krishna">Krishna</option>
+                <option value="gandhi">Gandhi</option>
+            </select>
+        </div>
+        <div class="size-select">
+            <p id="size-text">Size:</p>
+            <div class="size-n">
+                <label for="small">Small :</label>
+                <input type="radio" value="small" name="size" id="small">
+            </div>
+            <div class="size-n">
+                <label for="medium">Medium :</label>
+                <input type="radio" value="medium" name="size" id="medium">
+            </div>
+            <div class="size-n">
+                <label for="large">Large :</label>
+                <input type="radio" value="large" name="size" id="large" checked>
+            </div>
+            <div class="size-n">
+                <label for="extra-large">Extra Large:</label>
+                <input type="radio" value="extra-large" name="size" id="extra-large">
+            </div>
+            <div class="size-n">
+                <label for="extra-extra-large">Extra Extra Large:</label>
+                <input type="radio" value="extra-extra-large" name="size" id="extra-extra-large">
+            </div>
+        </div>
+        <div class="container">
+            <label for="tnc">Terms & Conditions</label>
+            <input type="checkbox" id="tnc" name="tos" required>
+        </div>
+        <div class="buttons">
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </div>
+    </form>
+</body>
+
+<script src="script.js"></script>
+
+</html>

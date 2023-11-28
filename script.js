@@ -38,18 +38,18 @@ const validEmail = e => {
     return !(regex.test(String(e)))
 }
 const validBitsID = e => {
-    const regex = /^[0-9]{4}[a-bA-B]([a-bA-B]|[0-5])[a-zA-Z]{2}[0-9]{4}[a-zA-Z]/;
+    const regex = /^[0-9]{4}[a-bA-B]([a-bA-B]|[0-7])[a-zA-Z]{2}[0-9]{4}[a-zA-Z]/;
     return !(regex.test(String(e)))
 }
 
 const validate = () => {
     if(username.value === ''){
-        error(username, 'Username is required');
+        error(username, 'Name is required');
     } else if ((username.value.length < 5) || (username.value.length > 50)){
-        error(username,'Length 5-50 Letters')
+        error(username,'Name must be 5-50 Letters')
     } else {
         success(username);
-        console.log(username.value)
+        console.log(username.value);
     }
 
     if(email.value === ''){
@@ -58,7 +58,7 @@ const validate = () => {
         error(email, 'Email is invalid');
     } else {
         success(email);
-        console.log(email.value)
+        console.log(email.value);
     }
 
     if(pnumber.value === ''){
@@ -66,8 +66,8 @@ const validate = () => {
     } else if(validNumber(pnumber.value)){
         error(pnumber, 'Phone number is invalid');
     } else {
-        success(pnumber)
-        console.log(pnumber.value)
+        success(pnumber);
+        console.log(pnumber.value);
     }
 
     if(bitsid.value === ''){
@@ -75,7 +75,7 @@ const validate = () => {
     } else if(validBitsID(bitsid.value)) {
         error(bitsid, 'Bits ID is invalid');
     } else {
-        success(bitsid)
-        console.log(bitsid.value)
+        success(bitsid);
+        console.log(bitsid.value);
     }
 }

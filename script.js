@@ -8,6 +8,14 @@ form.addEventListener('submit', e => {
     e.preventDefault();
 
     validate();
+
+    const formData = new FormData(form);
+
+    fetch('http://www.foo.com/', {
+        method: 'post',
+        body: formData
+    }).then((response) => response.json())
+    .then((json) => console.log(json));
 })
 
 const error = (element, message) => {
